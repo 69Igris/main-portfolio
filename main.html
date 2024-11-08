@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AARYAN YADAV - PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(12, 13, 16);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        nav {
+            background-color: rgb(33, 35, 43);
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: #1eebfd;
+            font-size: 1.01rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ccd6f6;
+            text-decoration: none;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #64ffda;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #64ffda;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        #logo {
+            margin-top: 5px;
+            margin-right: 670px;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 23px 0;
+        }
+
+        .firstSection div {
+            width: 35%;
+        }
+
+        .right2 img {
+            height: 600px;
+            width: 400px;
+            margin: 50px 0;
+            margin-left: 50px;
+            margin-bottom: 0px;
+        }
+
+        .left2 {
+            margin: 100px;
+            margin-right: 0;
+            margin-top: 180 px;
+            margin-left: 80px;
+            font-size: 30px;
+        }
+
+        .span {
+            color: #1eebfd;
+        }
+
+        #typing-animation {
+            color: #1eebfd;
+            font-family: 'poppins', sans-serif;
+            font-weight: bold;
+            font-size: 45px;
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vw;
+        }
+
+        .secondSection h2 {
+            font-size: 60px;
+        }
+
+        .about-me-p {
+            display: flex;
+            margin: 40px 0;
+            gap: 4rem;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin: 60px 0;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(66 71 89);
+            height: 2.5px;
+            margin: 40px 84px 40px 8px;
+        }
+
+        .skill-card {
+            background: rgba(44, 246, 199, 0.139);
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            color: #1eebfd;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 8rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            height: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-content {
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-content h3 {
+            color: #ccd6f6;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-content p {
+            color: #8892b0;
+        }
+
+        .project-links {
+            margin-top: 1rem;
+        }
+
+        .project-link {
+            color: #64ffda;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .project-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #64ffda;
+            transition: width 0.3s ease;
+        }
+
+        .project-link:hover::after {
+            width: 100%;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 8rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 8px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .contact-label {
+            color: #1eebfd;
+        }
+
+        .contact-item a {
+            color: #ccd6f6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #64ffda;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #8892b0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left">
+                <a href="index.html"><img id="logo" src="../portfolio/images/portfoliologo2.png" alt="" height="50px"></a>
+            </div>
+            <div class="right">
+                <ul class="nav-links">
+                    <li><a href="#fs">Home</a></li>
+                    <li><a href="#ss">About Me</a></li>
+                    <li><a href="/">Skills</a></li>
+                    <li><a href="#projects">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="fs" class="firstSection">
+            <div class="left2">
+                <h2>HI . . .</h2>
+                <h2>I AM <span class="span">IGRIS</span></h2>
+                <h2 class="span">AKA AARYAN YADAV</h2>
+                <H2>AND I AM A</H2>
+                <span id="typing-animation"></span>
+            </div>
+            <div class="right2">
+                <a href="https://www.linkedin.com/in/aaryan-yadav-272b8a315/" target="_blank"><img
+                        src="../portfolio/images/main.png" alt="profile photo"></a>
+            </div>
+        </section>
+        <hr>
+        <section id="ss" class="secondSection">
+            <h2>About Me</h2>
+            <div>
+                <p class="about-me-p">Hi, I'm Aaryan Yadav, a passionate web developer, graphic designer, video editor,
+                    social media manager,Software Developer with a love for creating innovative and impactful digital
+                    experiences. I specialize in full-stack development, , and my goal is to blend functionality with
+                    aesthetics to bring ideas to life.</p>
+
+                <p class="about-me-p">With a background in Computer Science, I have had the opportunity to work on a
+                    wide range of projects, from building websites, developing mobile apps. My approach combines
+                    creativity with problem-solving to ensure that every project not only looks great but also delivers
+                    on its intended purpose.</p>
+
+                <p class="about-me-p">When I'm not working on client projects, you can find me exploring new design
+                    trends, tinkering with new technologies, hiking, or traveling. I’m always eager to learn and grow,
+                    constantly refining my skills and staying up to date with the latest industry trends.I believe in
+                    collaboration, communication, and the power of design to solve real-world problems.</p>
+            </div>
+
+            <div class="skills">
+                <div class="skill-card">HTML5</div>
+                <div class="skill-card">CSS3</div>
+                <div class="skill-card">React</div>
+                <div class="skill-card">Node.js</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">SQL</div>
+            </div>
+
+
+        </section>
+
+
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Project One</h3>
+                        <p>E-commerce Website</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Project Two</h3>
+                        <p>Social Media Dashboard</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Project Three</h3>
+                        <p>Weather App</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <a href="mailto:jyaaryan@gmail.com">yaaryan181@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">LinkedIn:</span>
+                        <a href="https://www.linkedin.com/in/aaryan-yadav-272b8a315/"
+                            target="_blank">linkedin.com/Aaryan-Yadav</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">GitHub:</span>
+                        <a href="#">github.com/johndoe</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Aaryan Yadav. All rights reserved.</p>
+        </footer>
+</body>
+
+</html>
+
+<script>
+
+    // Initialize the typing animation
+    const typingAnimationElement = document.getElementById('typing-animation');
+
+    // Create an array of typing text
+    const typingTexts = ['Web Developer   ', 'Software Engineer   ', 'Video Editor   ', 'Social Media Manager    ',];
+
+    // Create a function to display the typing animation for a given text
+    function playTypingAnimation(text) {
+        // Loop through each character and add it to the element
+        for (let i = 0; i < text.length; i++) {
+            setTimeout(() => {
+                typingAnimationElement.textContent += text[i];
+            }, i * 200); // Increase the delay to slow down the typing animation
+        }
+
+        // Once the animation is complete, reset the text and start over
+        setTimeout(() => {
+            typingAnimationElement.textContent = '';
+            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+        }, text.length * 200);
+    }
+
+    // Start the typing animation loop
+    playTypingAnimation(typingTexts[0]);
+
+</script>
+</body>
+
+</html>
